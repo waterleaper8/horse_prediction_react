@@ -4,11 +4,12 @@ import React from "react";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { FadeInSection } from "./FadeInImg";
+import MotionSimple from "./MotionSimple";
 // import { Link } from "react-router-dom";
 
 export const Predict = () => {
   return (
-    <>
+    <MotionSimple>
       <div className="row">
         <SMv className="mv text-light text-center d-flex align-items-center justify-content-center">
           <STitle className="title px-3 py-2">
@@ -42,6 +43,6 @@ export const Predict = () => {
           デモページへ
         </Link> */}
       </div>
-    </>
+    </MotionSimple>
   );
 };
