@@ -12,8 +12,11 @@ import { PredictApp } from "./components/PredictApp";
 import Loader from "./components/Loader";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useTracking } from "./hooks/useTracking";
 
 function App() {
+  useTracking("G-0NGNESXE8K");
+
   const location = useLocation();
   const [loaded, setLoaded] = useState(false);
 

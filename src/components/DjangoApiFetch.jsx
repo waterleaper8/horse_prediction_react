@@ -49,14 +49,14 @@ const DjangoApiFetch = () => {
       <form className="input-group pb-5">
         <input
           type="text"
-          className="form-control col-12 col-md-8"
+          className="form-control col-12 col-md-8 rounded"
           placeholder="URLを入力してください"
           aria-describedby="button-addon2"
           ref={inputRef}
           onChange={(e) => setRaceUrl(e.target.value)}
         />
         <button
-          className="btn btn-outline-secondary text-white col-12 col-md-2"
+          className="mt-3 mt-md-0 btn btn-outline-secondary text-white col-12 col-md-2 rounded"
           type="submit"
           id="button-addon2"
           onClick={predictHandler}
@@ -88,11 +88,11 @@ const DjangoApiFetch = () => {
         {`
           .js-fadeIn {
             opacity: 0;
-            transform: translateX(100px);
-            transition: 0.2s;
+            transform: translateX(200px);
+            transition: 0.4s;
           }
           .js-fadeIn.show {
-            transition-duration: 0.5s;
+            transition-duration: 0.8s;
             opacity: 1;
             transform: translate(0);
           }
