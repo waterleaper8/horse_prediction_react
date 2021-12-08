@@ -42,7 +42,7 @@ export const Header = () => {
                   Home
                 </NavLink>
               </NavItem>
-              <li className={"nav-item"}>
+              {/* <li className={"nav-item"}>
                 <NavLink
                   style={navlinkStyle}
                   className={"nav-link"}
@@ -51,7 +51,7 @@ export const Header = () => {
                 >
                   About
                 </NavLink>
-              </li>
+              </li> */}
               <li className={"nav-item"}>
                 <NavLink
                   style={navlinkStyle}
@@ -65,7 +65,7 @@ export const Header = () => {
               <li className={"nav-item"}>
                 <NavLink
                   style={navlinkStyle}
-                  to="/product/odds"
+                  to="/product/odds-app"
                   className={"nav-link"}
                   onClick={closeSpMenu}
                 >

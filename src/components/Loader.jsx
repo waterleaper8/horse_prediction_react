@@ -4,7 +4,7 @@ const Loader = (props) => {
   return (
     <div
       id="loader"
-      className={`d-flex align-items-center w-100 h-100 position-absolute top-0 left-0 bg-dark ${props.className}`}
+      className={`d-flex align-items-center w-100 vh-100 position-absolute top-0 left-0 bg-dark ${props.className}`}
     >
       <div className="loader">Loading...</div>
       <style jsx="true">{`

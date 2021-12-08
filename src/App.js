@@ -13,19 +13,26 @@ import Loader from "./components/Loader";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useTracking } from "./hooks/useTracking";
+import { OddsApp } from "./components/OddsApp";
 
 function App() {
   useTracking("G-0NGNESXE8K");
 
   const location = useLocation();
   const [loaded, setLoaded] = useState(false);
-
+  function disableScroll(event) {
+    event.preventDefault();
+  }
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    document.body.classList.add("hide");
+    document.addEventListener("touchmove", disableScroll, { passive: false });
     setTimeout(() => {
       setLoaded(true);
-      document.body.style.overflow = "visible";
-    }, 5000);
+      document.body.classList.remove("hide");
+      document.removeEventListener("touchmove", disableScroll, {
+        passive: false,
+      });
+    }, 3000);
   }, []);
 
   return (
@@ -49,6 +56,9 @@ function App() {
             </Route>
             <Route path="/product/odds">
               <Odds />
+            </Route>
+            <Route path="/product/odds-app">
+              <OddsApp />
             </Route>
           </Switch>
         </AnimatePresence>
