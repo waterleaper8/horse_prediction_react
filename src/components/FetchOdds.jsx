@@ -53,14 +53,14 @@ const FetchOdds = () => {
       <form className="input-group pb-5">
         <input
           type="text"
-          className="form-control col-12 col-md-8 rounded"
+          className="form-control col-12 col-md-9 rounded"
           placeholder="URLを入力してください"
           aria-describedby="button-addon2"
           ref={inputRef}
           onChange={(e) => setRaceUrl(e.target.value)}
         />
         <button
-          className="mt-3 mt-md-0 btn btn-outline-secondary text-white col-12 col-md-2 rounded"
+          className="mt-3 mt-md-0 btn btn-outline-secondary text-white col-12 col-md-3 rounded"
           type="submit"
           id="button-addon2"
           onClick={oddsHandler}

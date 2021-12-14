@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import $ from "jquery";
 import { useEffect } from "react";
 
-const DjangoApiFetch = () => {
+const FetchPredict = () => {
   const [results, setResults] = useState([]);
   const [raceUrl, setRaceUrl] = useState("");
 
@@ -45,18 +45,18 @@ const DjangoApiFetch = () => {
   };
 
   return (
-    <div className="pt-3">
+    <div className="pt-3 col-12 col-lg-8">
       <form className="input-group pb-5">
         <input
           type="text"
-          className="form-control col-12 col-md-8 rounded"
+          className="form-control col-12 col-md-9 rounded"
           placeholder="URLを入力してください"
           aria-describedby="button-addon2"
           ref={inputRef}
           onChange={(e) => setRaceUrl(e.target.value)}
         />
         <button
-          className="mt-3 mt-md-0 btn btn-outline-secondary text-white col-12 col-md-2 rounded"
+          className="mt-3 mt-md-0 btn btn-outline-secondary text-white col-12 col-md-3 rounded"
           type="submit"
           id="button-addon2"
           onClick={predictHandler}
@@ -78,7 +78,7 @@ const DjangoApiFetch = () => {
               <tr key={index} className="js-fadeIn">
                 <th scope="row">{result.number}</th>
                 <td>{result.name}</td>
-                <td>{result.percentage}</td>
+                <td>{Math.round(result.percentage * 100) / 100}</td>
               </tr>
             ))}
           </tbody>
@@ -102,4 +102,4 @@ const DjangoApiFetch = () => {
   );
 };
 
-export default DjangoApiFetch;
+export default FetchPredict;

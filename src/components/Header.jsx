@@ -17,10 +17,10 @@ export const Header = () => {
 
   return (
     <div className="row" id="header">
-      <Navbar expand="lg" className={"py-3 navbar-dark bg-dark"}>
+      <Navbar expand="lg" className={"py-2 navbar-dark bg-dark"}>
         <div className={"container-fluid align-items-baseline"}>
           <NavLink className="text-decoration-none" to="/">
-            <Navbar.Brand className={"navbar-brand fs-2 pb-2"}>
+            <Navbar.Brand className={"navbar-brand fs-1 pb-2 me-4"}>
               Horse Prediction
             </Navbar.Brand>
           </NavLink>
@@ -88,6 +88,33 @@ export const Header = () => {
           </Navbar.Collapse>
         </div>
       </Navbar>
+      <style jsx="true">{`
+        .nav-item {
+          padding-left: 0.6rem;
+          pdding-right: 0.6rem;
+        }
+
+        a.nav-link {
+          position: relative;
+          display: inline-block;
+          text-decoration: none;
+        }
+        a.nav-link::after {
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: #fff;
+          transform: scale(0, 1);
+          transform-origin: left top;
+          transition: transform 0.3s;
+        }
+        a.nav-link:hover::after {
+          transform: scale(1, 1);
+        }
+      `}</style>
     </div>
   );
 };

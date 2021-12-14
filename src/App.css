@@ -2,7 +2,22 @@ body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif;
   background-color: #212529;
+  overflow-x: hidden;
 }
+
+/* フォントファミリーの設定 */
+span.navbar-brand {
+  font-family: "Crimson Pro", serif;
+}
+
+/* .nav-link {
+  font-family: "Crimson Pro", serif;
+} */
+
+h1 {
+  font-family: "Crimson Pro", serif;
+}
+/* フォントファミリーの設定 end */
 
 .active {
   color: white !important;

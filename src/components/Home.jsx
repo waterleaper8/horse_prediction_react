@@ -14,12 +14,9 @@ export const Home = () => {
             "mv text-light text-center d-flex align-items-center justify-content-center"
           }
         >
-          <STitle className={"title px-3 py-2"}>
+          <STitle className={"title px-4 py-3"}>
             <h1>Horse Prediction</h1>
-            <p className={"fs-6 mb-1"}>
-              世界で唯一の<span className={"text-warning"}>80%</span>
-              を超える回収率を生み出す競馬予想AI
-            </p>
+            <p className={"fs-6 mb-1"}>競馬予想のためのWebアプリケーション</p>
           </STitle>
         </SMv>
       </div>
@@ -36,8 +33,8 @@ export const Home = () => {
               </h2>
             </Link>
           </SLinkHover>
-          <p className={"fs-6"}>
-            過去20年のレースデータをもとにずば抜けた的中率を叩き出す。
+          <p className={"fs-6 my-4"}>
+            過去10年のレースデータをもとにAIが競馬を予想する。
             3着以内に入りそうな馬を予想するのが得意。
           </p>
           <FadeInSection>
@@ -49,7 +46,7 @@ export const Home = () => {
         <div className={"col-md-6 bg-dark text-light p-5"}>
           <SLinkHover>
             <Link
-              to="/product/odds"
+              to="/product/odds-app"
               className={"text-dark text-decoration-none"}
             >
               <h2 className={"bg-light mb-3 p-2"}>
@@ -58,8 +55,8 @@ export const Home = () => {
               </h2>
             </Link>
           </SLinkHover>
-          <p className={"fs-6"}>
-            直前のレースデータをもとにそれぞれの賭け方をオッズで比較、
+          <p className={"fs-6 my-4"}>
+            馬券のそれぞれの賭け方をオッズで比較、
             異常に賭けが集中している馬から、高配当馬券を見つけ出す。
           </p>
           <FadeInSection>
