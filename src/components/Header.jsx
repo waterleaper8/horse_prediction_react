@@ -1,17 +1,15 @@
-import { NavLink } from "react-router-dom";
-import { NavItem, Navbar } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom"
+import { Navbar } from "react-bootstrap"
 
 export const Header = () => {
   function closeSpMenu() {
-    const ele1 = document.querySelector(".navbar-toggler");
+    const ele1 = document.querySelector(".navbar-toggler")
     if (ele1.classList.contains("collapsed")) {
-      ele1.classList.remove("collapsed");
+      ele1.classList.remove("collapsed")
     }
-    const ele2 = document.querySelector(".navbar-collapse");
+    const ele2 = document.querySelector(".navbar-collapse")
     if (ele2.classList.contains("show")) {
-      ele2.classList.remove("show");
+      ele2.classList.remove("show")
     }
   }
 
@@ -30,7 +28,7 @@ export const Header = () => {
             id="navbarSupportedContent"
           >
             <ul className={"navbar-nav me-auto mb-2 mb-lg-0"}>
-              <NavItem className={"nav-item"}>
+              <li className="nav-item">
                 <NavLink
                   exact
                   style={navlinkStyle}
@@ -41,8 +39,8 @@ export const Header = () => {
                 >
                   Home
                 </NavLink>
-              </NavItem>
-              {/* <li className={"nav-item"}>
+              </li>
+              {/* <li className="nav-item">
                 <NavLink
                   style={navlinkStyle}
                   className={"nav-link"}
@@ -52,7 +50,7 @@ export const Header = () => {
                   About
                 </NavLink>
               </li> */}
-              <li className={"nav-item"}>
+              <li className="nav-item">
                 <NavLink
                   style={navlinkStyle}
                   to="/product/predict-app"
@@ -62,7 +60,7 @@ export const Header = () => {
                   Prediction
                 </NavLink>
               </li>
-              <li className={"nav-item"}>
+              <li className="nav-item">
                 <NavLink
                   style={navlinkStyle}
                   to="/product/odds-app"
@@ -72,7 +70,7 @@ export const Header = () => {
                   Odds
                 </NavLink>
               </li>
-              <li className={"nav-item"}>
+              <li className="nav-item ">
                 <a
                   style={navlinkStyle}
                   className={"nav-link"}
@@ -80,7 +78,15 @@ export const Header = () => {
                   tabIndex="-1"
                   aria-disabled="true"
                 >
-                  <FontAwesomeIcon icon={faAngleDoubleUp} className="me-2" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 me-1"
+                    style={{ width: "20px", paddingBottom: "5px" }}
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                  </svg>
                   Portfolio
                 </a>
               </li>
@@ -101,7 +107,7 @@ export const Header = () => {
         }
         a.nav-link::after {
           position: absolute;
-          bottom: 2px;
+          bottom: 5px;
           left: 0;
           content: "";
           width: 100%;
@@ -114,11 +120,15 @@ export const Header = () => {
         a.nav-link:hover::after {
           transform: scale(1, 1);
         }
+
+        a.nav-link.active::after {
+          transform: scale(1, 1);
+        }
       `}</style>
     </div>
-  );
-};
+  )
+}
 
 const navlinkStyle = {
   transition: "all 0.5s",
-};
+}

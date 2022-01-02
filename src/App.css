@@ -17,6 +17,10 @@ span.navbar-brand {
 h1 {
   font-family: "Crimson Pro", serif;
 }
+
+h2 {
+  font-family: "Zen Old Mincho", serif;
+}
 /* フォントファミリーの設定 end */
 
 .active {
